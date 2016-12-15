@@ -11,45 +11,258 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/circles.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     
     <!-- CIRCLES BACKGROUND -->
+    <!-- x-small -->
     <svg class="circles circle1" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
-     <animate xlink:href="#back" attributeName="r" from="1" to="1" dur="1s" begin="0.4s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
-     <animate xlink:href="#back" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.4s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
-     <circle id="back" cx="7.2" cy="7" r="1" stroke-width="1.5"/>
+     <animate xlink:href="#back1" attributeName="r" from="1" to="1" dur="1s" begin="0.4s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back1" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.4s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
+     <circle id="back1" cx="7.2" cy="7" r="1" stroke-width="1.5"/>
      <circle class="front" cx="7.2" cy="7" r="1"/>
     </svg>
     <svg class="circles circle4" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
-     <animate xlink:href="#back" attributeName="r" from="1" to="1" dur="1s" begin="0.4s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
-     <animate xlink:href="#back" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.4s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
-     <circle id="back" cx="7.2" cy="7" r="1" stroke-width="1.5"/>
+     <animate xlink:href="#back4" attributeName="r" from="1" to="1" dur="1s" begin="0.4s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back4" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.4s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
+     <circle id="back4" cx="7.2" cy="7" r="1" stroke-width="1.5"/>
      <circle class="front" cx="7.2" cy="7" r="1"/>
     </svg>
     <svg class="circles circle5" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
-     <animate xlink:href="#back" attributeName="r" from="1" to="1" dur="1s" begin="0.4s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
-     <animate xlink:href="#back" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.4s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
-     <circle id="back" cx="7.2" cy="7" r="1" stroke-width="1.5"/>
+     <animate xlink:href="#back5" attributeName="r" from="1" to="1" dur="1s" begin="0.4s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back5" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.4s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
+     <circle id="back5" cx="7.2" cy="7" r="1" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="1"/>
+    </svg>
+    <svg class="circles circle6" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back6" attributeName="r" from="1" to="1" dur="1s" begin="0.4s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back6" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.4s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
+     <circle id="back6" cx="7.2" cy="7" r="1" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="1"/>
+    </svg>
+    <svg class="circles circle7" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back7" attributeName="r" from="1" to="1" dur="1s" begin="0.4s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back7" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.4s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
+     <circle id="back7" cx="7.2" cy="7" r="1" stroke-width="1.5"/>
      <circle class="front" cx="7.2" cy="7" r="1"/>
     </svg>
     
+    <!-- large -->
     <svg class="circles circle2" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
-     <animate xlink:href="#back2" attributeName="r" from="3" to="3" dur="1s" begin="0s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
+     <animate xlink:href="#back2" attributeName="r" from="4" to="4" dur="1s" begin="0s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
      <animate xlink:href="#back2" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
-     <circle id="back2" cx="7.2" cy="7" r="3" stroke-width="1.5"/>
-     <circle class="front" cx="7.2" cy="7" r="3"/>
+     <circle id="back2" cx="7.2" cy="7" r="4" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="4"/>
+    </svg>    
+    <svg class="circles circle8" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back8" attributeName="r" from="4" to="4" dur="1s" begin="0s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
+     <animate xlink:href="#back8" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
+     <circle id="back8" cx="7.2" cy="7" r="4" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="4"/>
+    </svg>    
+    <svg class="circles circle9" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back9" attributeName="r" from="4" to="4" dur="1s" begin="0s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
+     <animate xlink:href="#back9" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
+     <circle id="back9" cx="7.2" cy="7" r="4" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="4"/>
+    </svg>    
+    <svg class="circles circle10" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back10" attributeName="r" from="4" to="4" dur="1s" begin="0s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
+     <animate xlink:href="#back10" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
+     <circle id="back10" cx="7.2" cy="7" r="4" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="4"/>
+    </svg>    
+    <svg class="circles circle11" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back11" attributeName="r" from="4" to="4" dur="1s" begin="0s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
+     <animate xlink:href="#back11" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
+     <circle id="back11" cx="7.2" cy="7" r="4" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="4"/>
     </svg>    
     
+    <!-- small -->
     <svg class="circles circle3" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
      <animate xlink:href="#back3" attributeName="r" from="2" to="2" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
      <animate xlink:href="#back3" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
      <circle id="back3" cx="7.2" cy="7" r="2" stroke-width="1.5"/>
      <circle class="front" cx="7.2" cy="7" r="2"/>
     </svg>
-    
-    
+
+    <svg class="circles circle12" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back12" attributeName="r" from="2" to="2" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back12" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back12" cx="7.2" cy="7" r="2" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="2"/>
+    </svg>
+
+    <svg class="circles circle13" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back13" attributeName="r" from="2" to="2" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back13" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back13" cx="7.2" cy="7" r="2" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="2"/>
+    </svg>
+
+    <svg class="circles circle14" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back14" attributeName="r" from="2" to="2" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back14" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back14" cx="7.2" cy="7" r="2" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="2"/>
+    </svg>
+
+    <svg class="circles circle15" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back15" attributeName="r" from="2" to="2" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back15" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back15" cx="7.2" cy="7" r="2" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="2"/>
+    </svg>
+
+    <svg class="circles circle16" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back16" attributeName="r" from="2" to="2" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back16" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back16" cx="7.2" cy="7" r="2" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="2"/>
+    </svg>
+
+    <svg class="circles circle17" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back17" attributeName="r" from="2" to="2" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back17" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back17" cx="7.2" cy="7" r="2" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="2"/>
+    </svg>
+
+    <svg class="circles circle18" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back18" attributeName="r" from="2" to="2" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back18" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back18" cx="7.2" cy="7" r="2" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="2"/>
+    </svg>
+
+    <svg class="circles circle19" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back19" attributeName="r" from="2" to="2" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back19" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back19" cx="7.2" cy="7" r="2" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="2"/>
+    </svg>
+
+    <!-- medium -->
+    <svg class="circles circle20" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back20" attributeName="r" from="3" to="3" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back20" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back20" cx="7.2" cy="7" r="3" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="3"/>
+    </svg>
+
+    <svg class="circles circle21" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back21" attributeName="r" from="3" to="3" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back21" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back21" cx="7.2" cy="7" r="3" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="3"/>
+    </svg>
+
+    <svg class="circles circle22" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back22" attributeName="r" from="3" to="3" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back22" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back22" cx="7.2" cy="7" r="3" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="3"/>
+    </svg>
+
+    <svg class="circles circle23" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back23" attributeName="r" from="3" to="3" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back23" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back23" cx="7.2" cy="7" r="3" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="3"/>
+    </svg>
+
+    <svg class="circles circle24" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back24" attributeName="r" from="3" to="3" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back24" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back24" cx="7.2" cy="7" r="3" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="3"/>
+    </svg>
+
+    <svg class="circles circle25" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back25" attributeName="r" from="3" to="3" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back25" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back25" cx="7.2" cy="7" r="3" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="3"/>
+    </svg>
+
+    <svg class="circles circle26" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back26" attributeName="r" from="3" to="3" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back26" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back26" cx="7.2" cy="7" r="3" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="3"/>
+    </svg>
+
+    <svg class="circles circle27" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back27" attributeName="r" from="3" to="3" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back27" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back27" cx="7.2" cy="7" r="3" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="3"/>
+    </svg>
+
+    <svg class="circles circle28" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back28" attributeName="r" from="3" to="3" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back28" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back28" cx="7.2" cy="7" r="3" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="3"/>
+    </svg>
+    <svg class="circles circle29" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back29" attributeName="r" from="3" to="3" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back29" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back29" cx="7.2" cy="7" r="3" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="3"/>
+    </svg>
+
+    <svg class="circles circle30" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back30" attributeName="r" from="3" to="3" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back30" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back30" cx="7.2" cy="7" r="3" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="3"/>
+    </svg>
+
+    <svg class="circles circle31" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back31" attributeName="r" from="3" to="3" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back31" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back31" cx="7.2" cy="7" r="3" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="3"/>
+    </svg>
+
+    <svg class="circles circle32" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back32" attributeName="r" from="3" to="3" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back32" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back32" cx="7.2" cy="7" r="3" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="3"/>
+    </svg>
+
+    <svg class="circles circle33" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back33" attributeName="r" from="3" to="3" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back33" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back33" cx="7.2" cy="7" r="3" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="3"/>
+    </svg>
+
+    <svg class="circles circle34" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back34" attributeName="r" from="3" to="3" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back34" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back34" cx="7.2" cy="7" r="3" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="3"/>
+    </svg>
+
+    <svg class="circles circle35" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back35" attributeName="r" from="3" to="3" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back35" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back35" cx="7.2" cy="7" r="3" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="3"/>
+    </svg>
+
+    <svg class="circles circle36" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back36" attributeName="r" from="3" to="3" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back36" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back36" cx="7.2" cy="7" r="3" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="3"/>
+    </svg>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
