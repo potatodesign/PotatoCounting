@@ -11,7 +11,7 @@ html, body {
 
 /* INTRO */
 #intro {
-  margin: 40px 0;
+  margin: 5.5rem 0;
   font-family: SkipLegDay;
   text-align: center;
   color: #2c2c2b;
@@ -24,4 +24,13 @@ html, body {
 
 #intro h2 {
   font-size: 2rem;
+}
+
+/* MESSAGE */
+#message {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 300;
+  color: #2c2c2b;
 }
