@@ -14,7 +14,42 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <h1>Hello, Potato!</h1>
+    
+    <!-- CIRCLES BACKGROUND -->
+    <svg class="circles circle1" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back" attributeName="r" from="1" to="1" dur="1s" begin="0.4s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.4s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
+     <circle id="back" cx="7.2" cy="7" r="1" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="1"/>
+    </svg>
+    <svg class="circles circle4" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back" attributeName="r" from="1" to="1" dur="1s" begin="0.4s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.4s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
+     <circle id="back" cx="7.2" cy="7" r="1" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="1"/>
+    </svg>
+    <svg class="circles circle5" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back" attributeName="r" from="1" to="1" dur="1s" begin="0.4s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.4s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
+     <circle id="back" cx="7.2" cy="7" r="1" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="1"/>
+    </svg>
+    
+    <svg class="circles circle2" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back2" attributeName="r" from="3" to="3" dur="1s" begin="0s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
+     <animate xlink:href="#back2" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
+     <circle id="back2" cx="7.2" cy="7" r="3" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="3"/>
+    </svg>    
+    
+    <svg class="circles circle3" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+     <animate xlink:href="#back3" attributeName="r" from="2" to="2" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
+     <animate xlink:href="#back3" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze"  id="circ-anim" />
+     <circle id="back3" cx="7.2" cy="7" r="2" stroke-width="1.5"/>
+     <circle class="front" cx="7.2" cy="7" r="2"/>
+    </svg>
+    
+    
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>

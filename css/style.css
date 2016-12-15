@@ -3,3 +3,41 @@ html, body {
   background-color: #f1e60d;
   height: 100%;
 }
+
+/* CIRCLES */
+.front {
+  fill: rgba(255, 255, 255, 0.9);
+}
+#back {
+  fill: transparent;
+  stroke: rgba(255, 255, 255, 0.7);
+}
+
+.circles {
+  position: fixed;
+}
+
+.circle1 {
+  top: 15%;
+  left: 5%;
+}
+
+.circle2 {
+  top: 5%;
+  left: 75%;
+}
+
+.circle3 {
+  top: 20%;
+  left: 65%;
+}
+
+.circle4 {
+  top: 30%;
+  left: 20%;
+}
+
+.circle5 {
+  top: 30%;
+  left: 53%;
+}
