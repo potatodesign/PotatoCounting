@@ -62,3 +62,11 @@ html, body {
   border-radius: 1.25rem;
   box-shadow: 0px 0px 0.1875rem 0.375rem #373736;
 }
+
+#counter hr.line {
+  width: 12%;
+  border: none; 
+  border-bottom:  0.11rem solid #373736;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
