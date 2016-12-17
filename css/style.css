@@ -11,7 +11,7 @@ html, body {
 
 /* INTRO */
 #intro {
-  margin: 5.5rem 0;
+  padding: 2.5rem 0 0;
   font-family: SkipLegDay;
   text-align: center;
   color: #2c2c2b;
@@ -22,8 +22,14 @@ html, body {
   font-weight: 700;
 }
 
-#intro h2 {
-  font-size: 2rem;
+#intro h3 {
+  font-size: 1.9rem;
+}
+
+/* LOGO */
+#logo img { 
+  padding-top: 20px;
+  width: 50%;
 }
 
 /* MESSAGE */
@@ -39,7 +45,7 @@ html, body {
 #counter {
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
-  margin: 1.25rem 0;
+  margin: 1rem 0;
 }
 
 #counter .countdown {
@@ -67,6 +73,6 @@ html, body {
   width: 12%;
   border: none; 
   border-bottom:  0.11rem solid #373736;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
