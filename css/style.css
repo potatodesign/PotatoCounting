@@ -1,6 +1,6 @@
 /* condivisi */
 html, body {
-  background-color: #f1e60d;
+  background-color: #f1df0d;
   height: 100%;
 }
 
@@ -18,12 +18,12 @@ html, body {
 }
 
 #intro h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 
 #intro h3 {
-  font-size: 1.9rem;
+  font-size: 1.6rem;
 }
 
 /* LOGO */
@@ -34,7 +34,7 @@ html, body {
 /* MESSAGE */
 #message {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: center;
   font-weight: 300;
   color: #2c2c2b;
