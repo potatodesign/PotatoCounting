@@ -44,7 +44,6 @@ html, body {
 #counter {
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
-  margin: 1rem 0;
 }
 
 #counter .countdown {
@@ -74,4 +73,53 @@ html, body {
   border-bottom:  0.11rem solid #373736;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+/* FORM */
+#form .col-md-3 {
+  padding: 0 10px;
+}
+
+#form .form-item {
+  border-radius: 13px;
+}
+
+.form-item::-webkit-input-placeholder
+{
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  color: #3c3c3b;
+}
+.form-item::-moz-placeholder {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  color: #3c3c3b;
+}
+.form-item:-ms-input-placeholder {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  color: #3c3c3b;
+}
+.form-item:-moz-placeholder {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  color: #3c3c3b;
+}
+.btn-submit {
+  width: 100%;
+  font-family: SkipLegDay;
+  font-size: 18px;
+  color: #fafafa;
+  background-color: #373736;
+  border: 0.125rem solid #fafafa;
+  border-radius: 13px;
+  box-shadow: 0px 0px 0.1875rem 0.375rem #373736;
+  height: 30px;
+  transition: all 0.3s ease-in-out;
+}
+.btn-submit:hover {
+  color: #2c2c2b;
+  background-color: #fafafa;
+  border: 0.125rem solid #373736;
+  box-shadow: 0px 0px 0.1875rem 0.375rem #fafafa;
 }
