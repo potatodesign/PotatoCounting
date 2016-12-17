@@ -76,13 +76,9 @@ html, body {
 }
 
 /* FORM */
-#form .col-md-3 {
-  padding: 0 10px;
-}
+#form .col-md-3 { padding: 0 10px; }
 
-#form .form-item {
-  border-radius: 13px;
-}
+#form .form-item { border-radius: 13px; }
 
 .form-item::-webkit-input-placeholder
 {
@@ -122,4 +118,48 @@ html, body {
   background-color: #fafafa;
   border: 0.125rem solid #373736;
   box-shadow: 0px 0px 0.1875rem 0.375rem #fafafa;
+}
+
+/* SOCIAL */
+#social { margin-top: 5%; }
+
+#social p {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #2c2c2b;
+}
+
+#social a {
+  text-decoration: none;
+}
+
+#social .fa {
+  color: #373736;
+  font-size: 2rem;
+  margin: 5px 15px;
+  position: relative;
+  bottom: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+#social .facebook:hover {
+  color: #3b5998;
+  bottom: 5px;
+}
+#social .instagram:hover {
+  color: #e95950;
+  bottom: 5px;
+}
+#social .github:hover {
+  color: #000000;
+  bottom: 5px;
+}
+#social .pinterest:hover {
+  color: #cb2027;
+  bottom: 5px;
+}
+#social .twitter:hover {
+  color: #55acee;
+  bottom: 5px;
 }
