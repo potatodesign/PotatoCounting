@@ -101,6 +101,11 @@ html, body {
   font-weight: 300;
   color: #3c3c3b;
 }
+
+#form #messageForm {
+  height: 94px;
+}
+
 .btn-submit {
   width: 100%;
   font-family: SkipLegDay;
