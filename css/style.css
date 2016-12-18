@@ -59,7 +59,7 @@ html, body {
   box-shadow: 0px 0px 0.1875rem 0.375rem #fafafa;
   transition: all 0.3s ease-in-out;
 }
-
+/*
 #counter .countdown:hover {
   color: #fafafa;
   background-color: #373736;
@@ -67,7 +67,7 @@ html, body {
   border-radius: 1.25rem;
   box-shadow: 0px 0px 0.1875rem 0.375rem #373736;
 }
-
+*/
 #counter hr.line {
   width: 12%;
   border: none; 
