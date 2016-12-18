@@ -11,7 +11,7 @@ html, body {
 
 /* INTRO */
 #intro {
-  padding: 2.5rem 0 0;
+  padding: 3rem 0 0;
   font-family: SkipLegDay;
   text-align: center;
   color: #2c2c2b;
@@ -38,6 +38,7 @@ html, body {
   text-align: center;
   font-weight: 300;
   color: #2c2c2b;
+  padding-bottom: 30px;
 }
 
 /* COUNTER */
@@ -71,8 +72,8 @@ html, body {
   width: 12%;
   border: none; 
   border-bottom:  0.11rem solid #373736;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 /* FORM */
@@ -106,6 +107,8 @@ html, body {
   height: 94px;
 }
 
+#form .submit { padding-top: 10px; }
+
 .btn-submit {
   width: 100%;
   font-family: SkipLegDay;
@@ -126,13 +129,14 @@ html, body {
 }
 
 /* SOCIAL */
-#social { margin-top: 5%; }
+#social { margin-top: 3%; }
 
 #social p {
   font-family: 'Ubuntu', sans-serif;
   font-size: 0.9rem;
   font-weight: 300;
   color: #2c2c2b;
+  margin-bottom: 0.3125rem;
 }
 
 #social a {
@@ -141,8 +145,8 @@ html, body {
 
 #social .fa {
   color: #373736;
-  font-size: 2rem;
-  margin: 5px 15px;
+  font-size: 1.5rem;
+  margin: 5px 8px;
   position: relative;
   bottom: 0;
   transition: all 0.2s ease-in-out;
