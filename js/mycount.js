@@ -1,5 +1,5 @@
 $(function() {
   $('.countdown').countdown({
-    date: "January 1, 2017 15:00:00"
+    date: "February 14, 2017 22:00:00"
   });
 });
