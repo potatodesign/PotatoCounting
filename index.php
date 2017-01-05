@@ -1,3 +1,57 @@
+<?php
+  // controllo che sia stato cliccato il submit
+  if(isset($_POST['submit'])) {
+    // setto il mittente della mail
+    $from = $_POST['email'];
+    $name = $_POST['name'];
+    $message = $_POST['message'];
+    // setto il destinatario
+    $to = 'info@startae14.gq';
+    // l'oggetto
+    $subject = 'Email signup '. $from;
+    $subjectConf = 'Welcome to PotatoDesign';
+    
+    // ed il corpo
+    $body = file_get_contents("email_template/response.html");
+    // Set content-type header for sending HTML email
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+    // Additional headers
+    $headers .= 'From: ' . $from . "\r\n";
+    $headers .= 'Reply-To: ' . $from . "\r\n";
+    
+    // controllo se nn è stato inserito un valore per la email
+    if(!$_POST['email'] || !$_POST['name']) {
+      // setto il messaggio errore
+      $emailError = '<script> toastMessage("<i class=\"fa fa-exclamation-triangle\" aria-hidden=\"true\"></i> &nbsp;Please enter a valid email address and Full name", "error"); </script>';
+    }
+    
+    // se invece nn ci sono errori
+    if (!$emailError) {
+      $email_content = "Name: $name\n";
+      $email_content .= "Email: $email\n\n";
+      $email_content .= "Message:\n$message\n";
+      // se va a buon fine l'invio email
+      if (mail ($to, $subject, $email_content, $headers)) {
+        // do messaggio di successo
+        $result = '<script> toastMessage("<i class=\"fa fa-check\" aria-hidden=\"true\"></i> &nbsp;thank you we\'ll keep you updated", "success"); </script>';
+        // Set content-type header for sending HTML email
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+        // Additional headers
+        $headers .= 'From: ' . $to . "\r\n";
+        $headers .= 'Reply-To: ' . $to . "\r\n";
+        mail ($from, $subjectConf, $body, $headers);
+      // se invece qualcosa nell'invio mail nn va a buon fine
+      } else {
+        // do il messaggio di errore
+        $result = '<script> toastMessage("<i class=\"fa fa-exclamation-triangle\" aria-hidden=\"true\"></i> &nbsp;sorry there is been an error, please try again", "error"); </script>';
+      }
+    }
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -334,15 +388,15 @@
             <div class="col-md-12">
               <div class="col-md-3 offset-md-3">
                 <fieldset class="form-group">
-                  <input type="fullname" class="form-control form-control-md form-item" id="fullname" placeholder="Full name">
+                  <input type="fullname" class="form-control form-control-md form-item" id="fullname" name="name" placeholder="Full name">
                 </fieldset>
                 <fieldset class="form-group">
-                  <input type="email" class="form-control form-control-md form-item" id="email" placeholder="Mail address">
+                  <input type="email" class="form-control form-control-md form-item" id="email" name="email" placeholder="Mail address">
                 </fieldset>
               </div>
               <div class="col-md-3">
                 <fieldset class="form-group">
-                  <textarea class="form-control form-control-md form-item" id="messageForm" placeholder="Say something" rows="3"></textarea>
+                  <textarea class="form-control form-control-md form-item" name="message" id="messageForm" placeholder="Say something" rows="3"></textarea>
                 </fieldset>
               </div>
             </div>
@@ -350,7 +404,7 @@
           <div class="row submit">
             <div class="col-md-12">
               <div class="col-md-2 offset-md-5">
-                <button type="submit" class="btn btn-sm btn-submit">SUBMIT</button>
+                <button type="submit" class="btn btn-sm btn-submit" name="submit">SUBMIT</button>
               </div>
             </div>
           </div>        
@@ -388,12 +442,18 @@
     </section>
 
     <!-- END SOCIAL -->
+    
+    <div id="snackbar">Some text some message..</div>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
     <script type="text/javascript" src="js/mycount.js"></script>
+    <script type="text/javascript" src="js/toastMessage.js"></script>
+    <?php echo $emailError;?>
+    <?php echo $result;?>
   </body>
 </html>
