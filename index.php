@@ -6,20 +6,22 @@
     $name = $_POST['name'];
     $message = $_POST['message'];
     // setto il destinatario
-    $to = 'info@startae14.gq';
+    $to = 'info@potatodesign.it';
     // l'oggetto
     $subject = 'Email signup '. $from;
-    $subjectConf = 'Welcome to PotatoDesign';
+    $subjectConf = 'Welcome to Potato Design';
     
     // ed il corpo
     $body = file_get_contents("email_template/response.html");
+    
     // Set content-type header for sending HTML email
     $headers = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
 
     // Additional headers
     $headers .= 'From: ' . $from . "\r\n";
     $headers .= 'Reply-To: ' . $from . "\r\n";
+    $headers .= "X-Mailer: PHP/" . phpversion();
     
     // controllo se nn è stato inserito un valore per la email
     if(!$_POST['email'] || !$_POST['name']) {
@@ -30,7 +32,7 @@
     // se invece nn ci sono errori
     if (!$emailError) {
       $email_content = "Name: $name\n";
-      $email_content .= "Email: $email\n\n";
+      $email_content .= "Email: $from\n\n";
       $email_content .= "Message:\n$message\n";
       // se va a buon fine l'invio email
       if (mail ($to, $subject, $email_content, $headers)) {
