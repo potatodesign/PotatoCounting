@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
     <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
-    <title>Welcome to Potato Design</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <title>Welcome to Potato Design</title>
+    <link href="https://fonts.googleapis.com/css?family=Neucha|Ubuntu:300,400,700" rel="stylesheet">
+    <!-- The title tag shows in email notifications, like Android 4.4. -->
     <!-- Web Font / @font-face : BEGIN -->
     <!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
     
@@ -20,13 +22,14 @@
     
     <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
     <!--[if !mso]><!-->
-        <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+        <link href='https://fonts.googleapis.com/css?family=Neucha|Ubuntu:300,400,700' rel="stylesheet" type='text/css'>
     <!--<![endif]-->
 
     <!-- Web Font / @font-face : END -->
     
     <!-- CSS Reset -->
     <style>
+      
         @import url('https://fonts.googleapis.com/css?family=Neucha|Ubuntu:300,400,700');
         /* What it does: Remove spaces around the email design added by some email clients. */
         /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
@@ -36,7 +39,7 @@
             padding: 0 !important;
             height: 100% !important;
             width: 100% !important;
-            font-family: 'Ubuntu', sans-serif;
+            font-family: 'Ubuntu';
         }
         
         /* What it does: Stops email clients resizing small text. */
@@ -174,15 +177,14 @@
             <![endif]-->
 
             <!-- Email Header : BEGIN -->
-            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px;">
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px;@import url('https://fonts.googleapis.com/css?family=Neucha|Ubuntu:300,400,700');">
                 <tr>
                     <td style="padding: 10px 0; text-align: center;">
-                      <h1 style=" font-size:42px; font-family: 'Neucha', cursive; color:#373736; margin-bottom: 30px;">HELLO!</h1>  
-                      <!--<img src="http://placehold.it/200x50" width="200" height="50" alt="alt_text" border="0" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">-->
+                      <h1 style=" font-size:42px; font-family: Neucha; color:#373736; margin-bottom: 30px;">HELLO!</h1>  
                     </td>
                 </tr>
                 <tr>
-                  <td style="text-align: center;  font-family: 'Neucha', cursive; font-size: 28px; text-transform: uppercase; color:#373736;">
+                  <td style="text-align: center;  font-family: 'Neucha'; font-size: 28px; text-transform: uppercase; color:#373736;">
                     <h2 style="margin: 0 0 10px 0; font-size:28px;">
                       Welcome in our kitchen...
                     </h2>
@@ -200,7 +202,7 @@
                 <!-- Hero Image, Flush : GIF -->
                 <tr>
                     <td>
-                        <img src="http://www.potatodesign.it/email_template/img/POTATO.gif" alt="Potato Logo" border="0" align="center" class="fluid" style="width: 60%; max-width: 680px; height: auto; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; margin: 0 20%;">
+                        <img src="http://www.potatodesign.it/email_template/img/POTATO.gif" alt="Potato Logo" border="0" align="center" class="fluid" style="width: 60%; max-width: 680px; height: auto; font-size: 15px; line-height: 20px; color: #555555; margin: 0 20%;">
                     </td>
                 </tr>
                 <!-- Hero Image, Flush : END -->
