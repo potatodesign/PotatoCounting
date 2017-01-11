@@ -157,12 +157,41 @@
   }
 }
 /* iPhone 5 ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+@media only screen and (min-device-width: 320px) and (min-device-height: 481px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
   /* Styles */
+  #intro { 
+    padding: 2.2rem 0 0; 
+  }
+  #intro h3 { padding-bottom: 1rem; }
+  #logo img { width: 95%; }
+  #message { padding: 1.2rem 0 0; }
+  #counter hr.line {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  #form .form-group {
+    margin: 10px auto;
+  }
   
+  #form .form-group .form-item {
+    padding: .5rem;
+  }
+  
+  #form .submit {
+    padding-top: 10px;
+  }
+  
+  #form .btn-submit {
+    font-size: 12px;
+    height: 1.32rem;
+  }
+  
+  #social p { 
+    margin: 20px 0 0;
+  }
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+@media only screen and (min-device-width: 320px) and (min-device-height: 481px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
 /* Styles */
 }
 
