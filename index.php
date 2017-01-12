@@ -41,11 +41,19 @@
         // Set content-type header for sending HTML email
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-        // Additional headers
-        $headers .= 'From: ' . $to . "\r\n";
-        $headers .= 'Reply-To: ' . $to . "\r\n";
-        mail ($from, $subjectConf, $body, $headers);
+        if (preg_match('/(.*)@(live|hotmail|msn|skype|outlook|bing)\.(.*)/', $from) != false) {
+          $to = 'potatodesign3@gmail.com';
+          // Additional headers
+          $headers .= 'From: ' . $to . "\r\n";
+          $headers .= 'Reply-To: ' . $to . "\r\n";
+          mail ($from, $subjectConf, $body, $headers);
+        } else {
+          // Additional headers
+          $headers .= 'From: ' . $to . "\r\n";
+          $headers .= 'Reply-To: ' . $to . "\r\n";
+          mail ($from, $subjectConf, $body, $headers);
+        }
+        
       // se invece qualcosa nell'invio mail nn va a buon fine
       } else {
         // do il messaggio di errore
