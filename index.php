@@ -1,6 +1,7 @@
 <?php
   // controllo che sia stato cliccato il submit
   if(isset($_POST['submit'])) {
+    $boundary = uniqid('np');
     // setto il mittente della mail
     $from = $_POST['email'];
     $name = $_POST['name'];
@@ -38,21 +39,38 @@
       if (mail ($to, $subject, $email_content, $headers)) {
         // do messaggio di successo
         $result = '<script> toastMessage("<i class=\"fa fa-check\" aria-hidden=\"true\"></i> &nbsp;thank you we\'ll keep you updated", "success"); </script>';
+        
+        $message = "This is a MIME encoded message."; 
+ 
+       $message .= "\r\n\r\n--" . $boundary . "\r\n";
+       $message .= "Content-type: text/plain;charset=utf-8\r\n\r\n";
+       $message .= "HELLO!\nWelcome in our kitchen...\nOur chef is cooking new tasty dishes...\nLet us introduce you who POTATO is...\nOur recipe is made by simple and genuine ingredients:\na fullstack developer and designer,\nwe ensure a wide range of design services focused on web development and graphic design.\nPotato cannot wait to\n sprout new ideas!\nKeep following us for new flavoured recipes...\n";
+
+       $message .= "\r\n\r\n--" . $boundary . "\r\n";
+       $message .= "Content-type: text/html;charset=utf-8\r\n\r\n";
+       $message .= $body;
+
+       $message .= "\r\n\r\n--" . $boundary . "--";
+        
         // Set content-type header for sending HTML email
         $headers = "MIME-Version: 1.0" . "\r\n";
-        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-        if (preg_match('/(.*)@(live|hotmail|msn|skype|outlook|bing)\.(.*)/', $from) != false) {
-          $to = 'potatodesign3@gmail.com';
+        $headers .= "Content-Type: multipart/alternative;boundary=" . $boundary . "\r\n";
+        //if (preg_match('/(.*)@(live|hotmail|msn|skype|outlook|bing)\.(.*)/', $from) != false) {
+        //  $to = 'potatodesign3@gmail.com';
           // Additional headers
           $headers .= 'From: ' . $to . "\r\n";
+          $headers .= 'Subject: ' . $subjectConf . "\r\n";
           $headers .= 'Reply-To: ' . $to . "\r\n";
-          mail ($from, $subjectConf, $body, $headers);
+          mail ($from, $subjectConf, $message, $headers);
+        /*
         } else {
           // Additional headers
           $headers .= 'From: ' . $to . "\r\n";
+          $headers .= 'Subject: ' . $subjectConf . "\r\n";
           $headers .= 'Reply-To: ' . $to . "\r\n";
-          mail ($from, $subjectConf, $body, $headers);
+          mail ($from, $subjectConf, $message, $headers);
         }
+        */
         
       // se invece qualcosa nell'invio mail nn va a buon fine
       } else {
