@@ -59,7 +59,12 @@
         $mail->Subject = $subjectConf;
         $mail->Body    = $body;
         $mail->AltBody = "HELLO!\nWelcome in our kitchen...\nOur chef is cooking new tasty dishes...\nLet us introduce you who POTATO is...\nOur recipe is made by simple and genuine ingredients:\na fullstack developer and designer,\nwe ensure a wide range of design services focused on web development and graphic design.\nPotato cannot wait to\n sprout new ideas!\nKeep following us for new flavoured recipes...\n";
-        $mail->send()
+
+        if(!$mail->send()) {
+            $emailError = '<script> toastMessage("<i class=\"fa fa-exclamation-triangle\" aria-hidden=\"true\"></i> &nbsp;There is an error on the confirmation email", "error"); </script>';
+        } else {
+            $result = '<script> toastMessage("<i class=\"fa fa-check\" aria-hidden=\"true\"></i> &nbsp;check you email address or the spam, we have sent you a confirmation email", "success"); </script>';
+        }
       /*  
        $message = "This is a MIME encoded message."; 
  
