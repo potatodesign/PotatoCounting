@@ -2,86 +2,63 @@
   include("PHPMailer/PHPMailerAutoload.php"); // inclusione della classe PHPMailer
   // controllo che sia stato cliccato il submit
   if(isset($_POST['submit'])) {
-    $boundary = uniqid('np');
-    // setto il mittente della mail
-    $from = $_POST['email'];
-    $name = $_POST['name'];
-    $message = $_POST['message'];
-    // setto il destinatario
-    $to = 'noreply@potatodesign.it';
-    // l'oggetto
-    $subject = 'Email signup '. $from;
-    $subjectConf = 'Welcome to Potato Design';
-    
-    // ed il corpo
-    $body = file_get_contents("email_template/response.html");
-    
-    // Set content-type header for sending HTML email
-    $headers = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
-
-    // Additional headers
-    $headers .= 'From: ' . $from . "\r\n";
-    $headers .= 'Reply-To: ' . $from . "\r\n";
-    $headers .= "X-Mailer: PHP/" . phpversion();
-    
-    // controllo se nn è stato inserito un valore per la email
+    // controllo mancato inserimento email
     if(!$_POST['email'] || !$_POST['name']) {
       // setto il messaggio errore
       $emailError = '<script> toastMessage("<i class=\"fa fa-exclamation-triangle\" aria-hidden=\"true\"></i> &nbsp;Please enter a valid email address and Full name", "error"); </script>';
     }
-    
     // se invece nn ci sono errori
-    if (!$emailError) {
+    if($_POST['email'] != null && $_POST['email'] != '' && $_POST['name'] != null && $_POST['name'] != '') {
+      // setto il mittente della mail
+      $from = $_POST['email'];
+      $name = $_POST['name'];
+      $message = $_POST['message'];
+      // setto il destinatario
+      $to = 'noreply@potatodesign.it';
+      // l'oggetto
+      $subject = 'Email signup '. $from;
+      $subjectConf = 'Welcome to Potato Design';
+      // ed il corpo
+      $body = file_get_contents("email_template/response.html");
+
+      // Set content-type header for sending HTML email
+      $headers = "MIME-Version: 1.0" . "\r\n";
+      $headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
+
+      // Additional headers
+      $headers .= 'From: ' . $from . "\r\n";
+      $headers .= 'Reply-To: ' . $from . "\r\n";
+      $headers .= "X-Mailer: PHP/" . phpversion();
       $email_content = "Name: $name\n";
       $email_content .= "Email: $from\n\n";
       $email_content .= "Message:\n$message\n";
-      // se va a buon fine l'invio email
       if(mail ($to, $subject, $email_content, $headers)) {
-        // do messaggio di successo
+        // messaggio di successo
         $result = '<script> toastMessage("<i class=\"fa fa-check\" aria-hidden=\"true\"></i> &nbsp;thank you we\'ll keep you updated", "success"); </script>';
-        
         $mail = new PHPMailer;
-        $mail->isSMTP();                                      // Set mailer to use SMTP
-        $mail->Host = 'prohosting4.netsons.net';  // Specify main and backup SMTP servers
-        $mail->SMTPAuth = true;                               // Enable SMTP authentication
-        $mail->Username = $to;                 // SMTP username
-        $mail->Password = 'POTATO2016sp';                           // SMTP password
-        $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-        $mail->Port = 465;                                    // TCP port to connect to
-
+        // Set mailer to use SMTP
+        $mail->isSMTP();
+        // Specify main and backup SMTP servers
+        $mail->Host = 'prohosting4.netsons.net';
+        // Enable SMTP authentication
+        $mail->SMTPAuth = true;
+        // SMTP username
+        $mail->Username = $to;
+        // SMTP password
+        $mail->Password = 'POTATO2016sp';
+        // Enable TLS encryption, `ssl` also accepted
+        $mail->SMTPSecure = 'ssl';
+        $mail->Port = 465;
         $mail->setFrom($to, 'Potato Design');
-        $mail->addAddress($from, $name);     // Add a recipient
-        //$mail->addAddress('ellen@example.com');               // Name is optional
+        // Add a recipient
+        $mail->addAddress($from, $name); 
         $mail->addReplyTo($to, 'Potato Design');
-        $mail->isHTML(true);                                  // Set email format to HTML
-
+        // Set email format to HTML
+        $mail->isHTML(true);
         $mail->Subject = $subjectConf;
         $mail->Body    = $body;
-        $mail->AltBody = "HELLO!\nWelcome in our kitchen...\nOur chef is cooking new tasty dishes...\nLet us introduce you who POTATO is...\nOur recipe is made by simple and genuine ingredients:\na fullstack developer and designer,\nwe ensure a wide range of design services focused on web development and graphic design.\nPotato cannot wait to\n sprout new ideas!\nKeep following us for new flavoured recipes...\n";
-        $mail->send()
-      /*  
-       $message = "This is a MIME encoded message."; 
- 
-       $message .= "\r\n\r\n--" . $boundary . "\r\n";
-       $message .= "Content-type: text/plain;charset=utf-8\r\n\r\n";
-       $message .= "HELLO!\nWelcome in our kitchen...\nOur chef is cooking new tasty dishes...\nLet us introduce you who POTATO is...\nOur recipe is made by simple and genuine ingredients:\na fullstack developer and designer,\nwe ensure a wide range of design services focused on web development and graphic design.\nPotato cannot wait to\n sprout new ideas!\nKeep following us for new flavoured recipes...\n";
-
-       $message .= "\r\n\r\n--" . $boundary . "\r\n";
-       $message .= "Content-type: text/html;charset=utf-8\r\n\r\n";
-       $message .= $body;
-
-       $message .= "\r\n\r\n--" . $boundary . "--";
-        
-        // Set content-type header for sending HTML email
-        $headers = "MIME-Version: 1.0" . "\r\n";
-        $headers .= "Content-Type: multipart/alternative;boundary=" . $boundary . "\r\n";
-        $headers .= 'From: ' . $to . "\r\n";
-        $headers .= 'Subject: ' . $subjectConf . "\r\n";
-        $headers .= 'Reply-To: ' . $to . "\r\n";
-        mail ($from, $subjectConf, $message, $headers);
-        */
-      // se invece qualcosa nell'invio mail nn va a buon fine
+        $mail->AltBody = "HELLO!\nWELCOME IN OUR KITCHEN...\nour chef is cooking new tasty dishes...\nLet us introduce you who POTATO is...\nOur recipe is made by simple and genuine ingredients:\na full-stack developer and a designer,\nwe ensure a wide range of design services focused on web development and graphic design.\nPotato cannot wait to\nsprout new ideas!\n";
+        $mail->send();
       } else {
         // do il messaggio di errore
         $result = '<script> toastMessage("<i class=\"fa fa-exclamation-triangle\" aria-hidden=\"true\"></i> &nbsp;sorry there is been an error, please try again", "error"); </script>';
