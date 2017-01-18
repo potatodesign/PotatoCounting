@@ -58,7 +58,12 @@
         $mail->Subject = $subjectConf;
         $mail->Body    = $body;
         $mail->AltBody = "HELLO!\nWELCOME IN OUR KITCHEN...\nour chef is cooking new tasty dishes...\nLet us introduce you who POTATO is...\nOur recipe is made by simple and genuine ingredients:\na full-stack developer and a designer,\nwe ensure a wide range of design services focused on web development and graphic design.\nPotato cannot wait to\nsprout new ideas!\n";
-        $mail->send();
+        if(!$mail->send()) {
+          $emailError = '<script> toastMessage("<i class=\"fa fa-exclamation-triangle\" aria-hidden=\"true\"></i> &nbsp;' . $mail->ErrorInfo . '", "error"); </script>';  
+        } else {
+            $result = '<script> toastMessage("<i class=\"fa fa-check\" aria-hidden=\"true\"></i> &nbsp;thank you, check your email or your spam", "success"); </script>';
+        }
+        //$mail->send();
       } else {
         // do il messaggio di errore
         $result = '<script> toastMessage("<i class=\"fa fa-exclamation-triangle\" aria-hidden=\"true\"></i> &nbsp;sorry there is been an error, please try again", "error"); </script>';
