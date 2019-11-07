@@ -12,10 +12,10 @@
     // l'oggetto
     $subject = 'Email signup '. $from;
     $subjectConf = 'Welcome to Potato Design';
-    
+
     // ed il corpo
     $body = file_get_contents("email_template/response.html");
-    
+
     // Set content-type header for sending HTML email
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
@@ -24,13 +24,13 @@
     $headers .= 'From: ' . $from . "\r\n";
     $headers .= 'Reply-To: ' . $from . "\r\n";
     $headers .= "X-Mailer: PHP/" . phpversion();
-    
+
     // controllo se nn è stato inserito un valore per la email
     if(!$_POST['email'] || !$_POST['name']) {
       // setto il messaggio errore
       $emailError = '<script> toastMessage("<i class=\"fa fa-exclamation-triangle\" aria-hidden=\"true\"></i> &nbsp;Please enter a valid email address and Full name", "error"); </script>';
     }
-    
+
     // se invece nn ci sono errori
     if (!$emailError) {
       $email_content = "Name: $name\n";
@@ -40,7 +40,7 @@
       if(mail ($to, $subject, $email_content, $headers)) {
         // do messaggio di successo
         $result = '<script> toastMessage("<i class=\"fa fa-check\" aria-hidden=\"true\"></i> &nbsp;thank you we\'ll keep you updated", "success"); </script>';
-        
+
         $mail = new PHPMailer;
         $mail->isSMTP();                                      // Set mailer to use SMTP
         $mail->Host = 'prohosting4.netsons.net';  // Specify main and backup SMTP servers
@@ -65,9 +65,9 @@
         } else {
             $result = '<script> toastMessage("<i class=\"fa fa-check\" aria-hidden=\"true\"></i> &nbsp;check you email address or the spam, we have sent you a confirmation email", "success"); </script>';
         }
-      /*  
-       $message = "This is a MIME encoded message."; 
- 
+      /*
+       $message = "This is a MIME encoded message.";
+
        $message .= "\r\n\r\n--" . $boundary . "\r\n";
        $message .= "Content-type: text/plain;charset=utf-8\r\n\r\n";
        $message .= "HELLO!\nWelcome in our kitchen...\nOur chef is cooking new tasty dishes...\nLet us introduce you who POTATO is...\nOur recipe is made by simple and genuine ingredients:\na fullstack developer and designer,\nwe ensure a wide range of design services focused on web development and graphic design.\nPotato cannot wait to\n sprout new ideas!\nKeep following us for new flavoured recipes...\n";
@@ -77,7 +77,7 @@
        $message .= $body;
 
        $message .= "\r\n\r\n--" . $boundary . "--";
-        
+
         // Set content-type header for sending HTML email
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-Type: multipart/alternative;boundary=" . $boundary . "\r\n";
@@ -95,13 +95,13 @@
   }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html ⚡ lang="en">
   <head>
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-
+    <link rel="canonical" href="http://wearepotato.com/">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favincons/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
@@ -121,7 +121,7 @@
     <link rel="stylesheet" href="css/responsive.css">
   </head>
   <body>
-    
+
     <!-- CIRCLES BACKGROUND -->
     <!-- x-small -->
     <svg class="circles circle1" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
@@ -154,39 +154,39 @@
      <circle id="back7" cx="7.2" cy="7" r="1" stroke-width="1.5"/>
      <circle class="front" cx="7.2" cy="7" r="1"/>
     </svg>
-    
+
     <!-- large -->
     <svg class="circles circle2" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
      <animate xlink:href="#back2" attributeName="r" from="4" to="4" dur="1s" begin="0s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
      <animate xlink:href="#back2" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
      <circle id="back2" cx="7.2" cy="7" r="4" stroke-width="1.5"/>
      <circle class="front" cx="7.2" cy="7" r="4"/>
-    </svg>    
+    </svg>
     <svg class="circles circle8" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
      <animate xlink:href="#back8" attributeName="r" from="4" to="4" dur="1s" begin="0s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
      <animate xlink:href="#back8" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
      <circle id="back8" cx="7.2" cy="7" r="4" stroke-width="1.5"/>
      <circle class="front" cx="7.2" cy="7" r="4"/>
-    </svg>    
+    </svg>
     <svg class="circles circle9" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
      <animate xlink:href="#back9" attributeName="r" from="4" to="4" dur="1s" begin="0s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
      <animate xlink:href="#back9" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
      <circle id="back9" cx="7.2" cy="7" r="4" stroke-width="1.5"/>
      <circle class="front" cx="7.2" cy="7" r="4"/>
-    </svg>    
+    </svg>
     <svg class="circles circle10" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
      <animate xlink:href="#back10" attributeName="r" from="4" to="4" dur="1s" begin="0s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
      <animate xlink:href="#back10" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
      <circle id="back10" cx="7.2" cy="7" r="4" stroke-width="1.5"/>
      <circle class="front" cx="7.2" cy="7" r="4"/>
-    </svg>    
+    </svg>
     <svg class="circles circle11" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
      <animate xlink:href="#back11" attributeName="r" from="4" to="4" dur="1s" begin="0s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
      <animate xlink:href="#back11" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" begin="0s" repeatCount="indefinite" fill="freeze" id="circ-anim"/>
      <circle id="back11" cx="7.2" cy="7" r="4" stroke-width="1.5"/>
      <circle class="front" cx="7.2" cy="7" r="4"/>
-    </svg>    
-    
+    </svg>
+
     <!-- small -->
     <svg class="circles circle3" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
      <animate xlink:href="#back3" attributeName="r" from="2" to="2" dur="1s" begin="0.2s" repeatCount="indefinite" fill="freeze" id="circ-anim" />
@@ -369,7 +369,7 @@
      <circle id="back36" cx="7.2" cy="7" r="3" stroke-width="1.5"/>
      <circle class="front" cx="7.2" cy="7" r="3"/>
     </svg>
-    
+
     <!-- HEADER -->
     <header id="intro">
       <div class="container">
@@ -382,7 +382,7 @@
       </div>
     </header>
     <!-- END HEADER -->
-    
+
     <!-- LOGO -->
     <section id="logo">
       <div class="container text-xs-center">
@@ -394,7 +394,7 @@
       </div>
     </section>
     <!-- END LOGO -->
-    
+
     <!-- MESSAGE -->
     <section id="message">
       <div class="container">
@@ -408,7 +408,7 @@
       </div>
     </section>
     <!-- END MESSAGE -->
-    
+
     <!-- COUNTER -->
     <section id="counter">
       <div class="container">
@@ -421,7 +421,7 @@
       </div>
     </section>
     <!-- END COUNTER -->
-    
+
     <!-- FORM -->
     <section id="form">
       <div class="container">
@@ -449,12 +449,12 @@
                 <button type="submit" class="btn btn-sm btn-submit" name="submit">SUBMIT</button>
               </div>
             </div>
-          </div>        
+          </div>
         </form>
       </div>
     </section>
     <!-- END FORM -->
-    
+
     <!-- SOCIAL -->
     <section id="social">
       <div class="container text-sm-center">
@@ -476,7 +476,7 @@
               </a>
               <a href="https://twitter.com/design_potato" target="_blank">
                 <li class="list-inline-item"><i class="fa fa-twitter twitter" aria-hidden="true"></i></li>
-              </a>              
+              </a>
             </ul>
           </div>
         </div>
@@ -484,7 +484,7 @@
     </section>
 
     <!-- END SOCIAL -->
-    
+
     <div id="snackbar">Some text some message..</div>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
